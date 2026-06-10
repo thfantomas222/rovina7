@@ -2,6 +2,49 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ─── MODAL SYSTEM ─────────────────────────────────────────────────
+  function openModal(id) {
+    const modal = document.getElementById('modal-' + id);
+    if (!modal) return;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    // focus close button for accessibility
+    modal.querySelector('.modal-close').focus();
+  }
+
+  function closeModal(modal) {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  // Open on album cover click or Enter/Space key
+  document.querySelectorAll('.album-cover[data-album]').forEach(cover => {
+    cover.addEventListener('click', () => openModal(cover.dataset.album));
+    cover.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(cover.dataset.album);
+      }
+    });
+  });
+
+  // Close via × button
+  document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => closeModal(btn.closest('.modal')));
+  });
+
+  // Close via backdrop click
+  document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+    backdrop.addEventListener('click', () => closeModal(backdrop.closest('.modal')));
+  });
+
+  // Close via Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal.is-open').forEach(closeModal);
+    }
+  });
+
   // ─── SCROLL FADE-IN ───────────────────────────────────────────────
   // Elements to animate. Add the class 'reveal' to anything you want
   // to drift up and fade in as it enters the viewport.
