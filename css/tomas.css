@@ -191,6 +191,10 @@ body {
   display: block;
 }
 
+.moreaboutme {
+  margin-top: auto; /* pushes to bottom if about-text is flex column */
+}
+
 /* ═══════════════════════════════════════════
    MODALS
    ═══════════════════════════════════════════ */
