@@ -222,7 +222,7 @@ body {
   transform: scale(1.02);
 }
 
-.even-ground {
+.evenground {
   background-color: #0a0a0a;
   padding: 0;
 }
@@ -246,7 +246,7 @@ body {
   z-index: 2;
 }
 
-.even-ground .album-artist-name { color: #f0ece3; }
+.evenground .album-artist-name { color: #0d0d0d; }
 .saudade .album-artist-name    { color: #0d0d0d; }
 
 .album-title-text {
