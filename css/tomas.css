@@ -181,12 +181,16 @@ body {
 
 .moreaboutme .album-artist-name    { color: #c8f000; }
 
-.moreaboutme-art {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+@media (max-width: 640px) {
+  .moreaboutme {
+    position: static;
+    height: auto;
+    padding: 10px 0 0 0;
+  }
+
+  .moreaboutme-art {
+    position: static;
+  }
 }
 
 .moreaboutme-art img {
