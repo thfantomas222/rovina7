@@ -116,10 +116,8 @@
   <section id="contact" class="contact-section">
     <div class="container">
       <p class="contact-cta reveal">FEEL FREE TO CONTACT ME!</p>
-     <!--  <a href="mailto:info@rovina7.com" class="contact-link reveal">CONTACT FORM</a> -->
+  <a href="mailto:info@rovina7.com" class="contact-link reveal">CONTACT FORM</a>
 
-<a href="mailto:info@rovina7.com" class="contact-link reveal" onclick="document.getElementById('modal-contact').classList.add('is-open'); document.body.style.overflow='hidden'; return false;">CONTACT FORM</a>
-      
     </div>
   </section>
 
@@ -152,45 +150,6 @@
 
   <script src="js/main.js"></script>
   
-<!-- Contact Form Modal -->
-<div class="modal" id="modal-contact" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
-  <div class="modal-backdrop"></div>
-  <div class="modal-panel modal-panel-contact">
-    <button class="modal-close" aria-label="Close">&#x2715;</button>
-    <div class="modal-content-contact">
-      <p class="modal-artist">ROVINA 7</p>
-      <h2 class="modal-title" id="contact-modal-title">GET IN TOUCH</h2>
-      <p class="modal-description">For bookings, collaborations or just to say hello.</p>
-
-      <form class="contact-form" onsubmit="handleContactForm(event)">
-        <div class="form-row">
-          <label for="cf-name">NAME</label>
-          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
-        </div>
-        <div class="form-row">
-          <label for="cf-email">EMAIL</label>
-          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
-        </div>
-        <div class="form-row">
-          <label for="cf-subject">SUBJECT</label>
-          <select id="cf-subject" name="subject">
-            <option value="">Select a topic</option>
-            <option value="booking">Booking / Live</option>
-            <option value="collab">Collaboration</option>
-            <option value="press">Press / Media</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="cf-message">MESSAGE</label>
-          <textarea id="cf-message" name="message" rows="5" placeholder="Your message..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit">SEND MESSAGE</button>
-        <p class="form-success" id="form-success">Message sent — thank you!</p>
-      </form>
-    </div>
-  </div>
-</div>
-  
+ 
 </body>
 </html>
