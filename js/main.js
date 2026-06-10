@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Open on album cover click or Enter/Space key
-  document.querySelectorAll('.album-cover[data-album]').forEach(cover => {
+  document.querySelectorAll('[data-album]').forEach(cover => {
     cover.addEventListener('click', () => openModal(cover.dataset.album));
     cover.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ─── ALBUM CLICK FEEDBACK ────────────────────────────────────────
-  document.querySelectorAll('.album-cover').forEach(cover => {
+  document.querySelectorAll('[data-album]').forEach(cover => {
     cover.addEventListener('click', () => {
       cover.style.transform = 'scale(0.97)';
       setTimeout(() => { cover.style.transform = ''; }, 150);
