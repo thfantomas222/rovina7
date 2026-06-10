@@ -44,14 +44,19 @@ body {
 
 .logo {
   font-family: 'Raleway', Impact, sans-serif;
-  font-size: clamp(72px, 16vw, 160px);
+  font-size: 16vw;
   font-weight: 900;
-  letter-spacing: -2px;
-  line-height: 0.92;
+  letter-spacing: -0.02em;
+  line-height: 1;
   color: #0d0d0d;
   text-transform: uppercase;
   padding-bottom: 6px;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+ /* ---  transform: scaleY(1.4);--- */
+  transform-origin: center center;
 }
 
 /* --- NAV --- */
