@@ -114,6 +114,8 @@ body {
 .about-text {
   flex: 1;
   padding-top: 4px;
+  display: flex;              
+  flex-direction: column;    
 }
 
 .section-title {
@@ -157,6 +159,8 @@ body {
 .moreaboutme {
   background-color: #0a0a0a;
   padding: 10px 0 0 0;
+  position: relative;        
+  margin-top: auto;           
 }
 
 
