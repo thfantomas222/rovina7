@@ -137,6 +137,15 @@ body {
   margin-bottom: 10px;
 }
 
+.subtitle a {
+  color: inherit;        /* keeps the same color as .subtitle */
+  text-decoration: none; /* removes underline */
+}
+
+.subtitle a:hover {
+  text-decoration: none;
+}
+
 .bio {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
