@@ -392,3 +392,193 @@ body {
     transition: none;
   }
 }
+
+
+/* ═══════════════════════════════════════════
+   MODALS
+   ═══════════════════════════════════════════ */
+
+/* Backdrop */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+/* Panel */
+.modal-panel {
+  position: relative;
+  background: #f0ece3;
+  max-width: 780px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  /* Slide up animation */
+  animation: modalIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #0d0d0d;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  padding: 4px 8px;
+}
+
+.modal-close:hover { opacity: 1; }
+
+/* Inner layout: art left, text right */
+.modal-inner {
+  display: flex;
+  gap: 0;
+}
+
+.modal-art {
+  flex: 0 0 260px;
+  background: #0a0a0a;
+  display: flex;
+  align-items: stretch;
+}
+
+.modal-art svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.modal-content {
+  flex: 1;
+  padding: 36px 36px 36px 32px;
+}
+
+.modal-artist {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.modal-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 44px);
+  color: #0d0d0d;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.modal-year {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #aaa;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.modal-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  border-top: 1px solid #ddd;
+  padding-top: 18px;
+}
+
+/* Tracklist */
+.modal-tracklist {
+  margin-bottom: 24px;
+}
+
+.modal-tracklist-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.modal-tracklist ol {
+  list-style: decimal;
+  padding-left: 18px;
+}
+
+.modal-tracklist li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  color: #222;
+  padding: 4px 0;
+  border-bottom: 1px solid #e8e4dc;
+}
+
+/* Streaming links */
+.modal-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modal-stream-link {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0d0d0d;
+  text-decoration: none;
+  border: 1.5px solid #0d0d0d;
+  padding: 7px 14px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.modal-stream-link:hover {
+  background: #0d0d0d;
+  color: #f0ece3;
+}
+
+/* Responsive */
+@media (max-width: 580px) {
+  .modal-inner { flex-direction: column; }
+  .modal-art { flex: none; height: 200px; }
+  .modal-content { padding: 24px 20px; }
+  .modal { padding: 12px; }
+}
