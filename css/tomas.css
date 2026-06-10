@@ -368,9 +368,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 20%;
   border: 1.5px solid #555;
   color: #555;
   text-decoration: none;
