@@ -215,7 +215,7 @@ body {
 
 .even-ground {
   background-color: #0a0a0a;
-  padding: 16px 0 12px 0;
+  padding: 0;
 }
 
 .saudade {
@@ -266,15 +266,17 @@ body {
 
 .saudade-art {
   position: absolute;
-  top: 30px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
 
-.saudade-art svg {
+.saudade-art img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .album-label {
@@ -393,7 +395,6 @@ body {
   }
 }
 
-
 /* ═══════════════════════════════════════════
    MODALS
    ═══════════════════════════════════════════ */
@@ -448,7 +449,7 @@ body {
   border: none;
   font-size: 22px;
   line-height: 1;
-  color: #0d0d0d;
+  color: #ffffff;
   cursor: pointer;
   z-index: 2;
   opacity: 0.5;
@@ -471,9 +472,14 @@ body {
   align-items: stretch;
 }
 
-.modal-art svg {
+.modal-art-saudade {
+  background: #f0ece3;
+}
+
+.modal-art img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -582,3 +588,4 @@ body {
   .modal-content { padding: 24px 20px; }
   .modal { padding: 12px; }
 }
+
