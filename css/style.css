@@ -42,7 +42,7 @@ body {
   padding-bottom: 0;
 }
 
-.logo {
+ /* ---  .logo {
   font-family: 'Raleway', Impact, sans-serif;
   font-size: 16vw;
   font-weight: 900;
@@ -57,6 +57,18 @@ body {
   display: block;
  /* ---  transform: scaleY(1.4);--- */
   transform-origin: center center;
+}
+--- */
+.logo {
+  font-family: 'Raleway', Impact, sans-serif;
+  font-size: clamp(72px, 16vw, 160px);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 0.92;
+  color: #0d0d0d;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  text-align: center;
 }
 
 /* --- NAV --- */
