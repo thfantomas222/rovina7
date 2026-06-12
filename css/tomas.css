@@ -189,6 +189,15 @@ body {
 
 .moreaboutme .album-artist-name { color: #c8f000; }
 
+.music-card-body {
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.music-card-body:hover {
+  transform: scale(1.02);
+}
+
 
 /* ═══════════════════════════════════════════
    MODALS
@@ -375,6 +384,14 @@ body {
   color: #f0ece3;
 }
 
+.modal-art-rovina7 {
+  background: #c8f000;
+}
+
+.modal-art-youtube {
+  background: #c8f000;
+}
+
 /* Responsive */
 @media (max-width: 580px) {
   .modal-inner { flex-direction: column; }
@@ -382,6 +399,7 @@ body {
   .modal-content { padding: 24px 20px; }
   .modal { padding: 12px; }
 }
+
 
 
 /* --- DIVIDER --- */
