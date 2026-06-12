@@ -665,6 +665,12 @@ body {
 audio {
   flex: 1;
   height: 32px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(30deg);
+  opacity: 0.8;
+}
+
+audio::-webkit-media-controls-panel {
+  background: transparent;
 }
 
 /* Responsive */
