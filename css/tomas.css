@@ -192,10 +192,34 @@ body {
 .music-card-body {
   cursor: pointer;
   transition: transform 0.18s ease;
+  width: 100%; /* keep this */
 }
 
 .music-card-body:hover {
   transform: scale(1.02);
+}
+
+/* Rovina 7 card — fixed width + aspect ratio */
+.rovina-card {
+  width: 280px;
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+/* YouTube cards — fixed width */
+.yt-card {
+  width: 280px;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.yt-card-lower {
+  margin-bottom: 0;
 }
 
 
@@ -419,9 +443,10 @@ body {
 
 .music-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;  /* was 1fr 1fr — change this */
   gap: 24px;
   align-items: start;
+  justify-content: start;           /* add this */
 }
 
 .music-card-eyebrow {
