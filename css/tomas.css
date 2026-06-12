@@ -271,7 +271,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0px;
+  margin-bottom: 8px;
   flex-shrink: 0;
 }
 
