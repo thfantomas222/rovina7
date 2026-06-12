@@ -544,6 +544,40 @@ body {
   color: #0a0a0a;
 }
 
+.sound-samples {
+  margin-bottom: 24px;
+}
+
+.sample-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+  gap: 16px;
+}
+
+.sample-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+audio {
+  flex: 1;
+  height: 32px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(30deg);
+  opacity: 0.8;
+}
+
+audio::-webkit-media-controls-panel {
+  background: transparent;
+}
+
 /* --- CONTACT SECTION --- */
 .contact-section {
   background-color: #0a0a0a;
