@@ -216,9 +216,13 @@ body {
 }
 
 .yt-eyebrow {
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #c8f000;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .music-card-body {
