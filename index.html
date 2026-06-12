@@ -51,25 +51,25 @@
   <hr class="divider" />
 
   <!-- ═══ MUSIC / WHAT I MAKE ════════════════════════════════════════ -->
-  <section id="music" class="music-section">
+<!--  <section id="music" class="music-section">
     <div class="container">
       <div class="music-grid">
 
         <!-- Left: Rovina 7 card -->
-        <div class="music-card reveal">
+       <!-- <div class="music-card reveal">
           <p class="music-card-eyebrow">MUSIC THAT I MAKE</p>
           <div class="music-card-body rovina-card">
             <div class="rovina-card-inner">
               <p class="rovina-eyebrow">THIS IS MY MUSICAL SOLO PROJECT</p>
               <h3 class="rovina-title">ROVINA 7</h3>
              <!-- <p class="subtitle reveal"> <a href=index.html>EXPLORE</a></p> -->
-              <a href="rovina7.html" style="color:#0a0a0a; text-decoration:none;">EXPLORE</a>
+         <!--     <a href="rovina7.html" style="color:#0a0a0a; text-decoration:none;">EXPLORE</a>
             </div>
           </div>
         </div>
 
         <!-- Right: YouTube card -->
-        <div class="music-card reveal">
+     <!--   <div class="music-card reveal">
           <p class="music-card-eyebrow yt-eyebrow">SUBSCRIBE TO MY</p>
           <div class="music-card-body yt-card">
             <h3 class="yt-title">YOUTUBE<br>CHANNEL</h3>
@@ -79,7 +79,27 @@
 
       </div>
     </div>
-  </section>
+  </section>-->
+
+  <!-- Left: Rovina 7 card -->
+<div class="music-card reveal">
+  <p class="music-card-eyebrow">MUSIC THAT I MAKE</p>
+  <div class="music-card-body rovina-card" data-album="rovina7" role="button" tabindex="0" aria-label="Open Rovina 7 info">
+    <div class="rovina-card-inner">
+      <p class="rovina-eyebrow">THIS IS MY MUSICAL SOLO PROJECT</p>
+      <h3 class="rovina-title">ROVINA 7</h3>
+    </div>
+  </div>
+</div>
+
+<!-- Right: YouTube card -->
+<div class="music-card reveal">
+  <p class="music-card-eyebrow yt-eyebrow">SUBSCRIBE TO MY</p>
+  <div class="music-card-body yt-card" data-album="youtube" role="button" tabindex="0" aria-label="Open YouTube info">
+    <h3 class="yt-title">YOUTUBE<br>CHANNEL</h3>
+  </div>
+  <div class="music-card-body yt-card yt-card-lower"></div>
+</div>
 
   <hr class="divider" />
 
@@ -200,6 +220,55 @@
     </div>
   </div>
 
+  <!-- Rovina 7 Modal -->
+<div class="modal" id="modal-rovina7" role="dialog" aria-modal="true" aria-labelledby="rovina7-title">
+  <div class="modal-backdrop"></div>
+  <div class="modal-panel">
+    <button class="modal-close" aria-label="Close">&#x2715;</button>
+    <div class="modal-inner">
+      <div class="modal-art modal-art-rovina7">
+        <img src="images/rovina7.png" alt="Rovina 7" />
+      </div>
+      <div class="modal-content">
+        <p class="modal-artist">Tomas Huszanik</p>
+        <h2 class="modal-title" id="rovina7-title">ROVINA 7</h2>
+        <p class="modal-description">
+          Rovina 7 is an instrumental music project where melody, atmosphere and musicianship matter more than trends.
+          Inspired by psychedelic rock, jazz fusion and cinematic sound, the project focuses on expressive guitar-driven
+          compositions built around mood, space and memorable musical ideas.
+        </p>
+        <div class="modal-links">
+          <a href="rovina7.html" class="modal-stream-link">EXPLORE</a>
+          <a href="#" class="modal-stream-link">SPOTIFY</a>
+          <a href="#" class="modal-stream-link">YOUTUBE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- YouTube Modal -->
+<div class="modal" id="modal-youtube" role="dialog" aria-modal="true" aria-labelledby="youtube-title">
+  <div class="modal-backdrop"></div>
+  <div class="modal-panel">
+    <button class="modal-close" aria-label="Close">&#x2715;</button>
+    <div class="modal-inner">
+      <div class="modal-art modal-art-youtube">
+        <!-- no image needed, styled block -->
+      </div>
+      <div class="modal-content">
+        <p class="modal-artist">Tomas Huszanik</p>
+        <h2 class="modal-title" id="youtube-title">YOUTUBE<br>CHANNEL</h2>
+        <p class="modal-description">
+          Watch performances, behind-the-scenes recordings and new music videos on the official YouTube channel.
+        </p>
+        <div class="modal-links">
+          <a href="https://www.youtube.com/channel/UCzSX-YjOWfZ7WpSGsXiq_Yg" target="_blank" class="modal-stream-link">OPEN CHANNEL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   
 
   <script src="js/main.js"></script>
