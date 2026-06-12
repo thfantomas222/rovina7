@@ -442,11 +442,9 @@ body {
 }
 
 .music-grid {
-  display: grid;
-  grid-template-columns: auto auto;  /* was 1fr 1fr — change this */
+  display: flex;
   gap: 24px;
   align-items: start;
-  justify-content: start;           /* add this */
 }
 
 .music-card-eyebrow {
@@ -472,10 +470,12 @@ body {
 
 /* Rovina 7 card — taller */
 .rovina-card {
+  width: 280px;
   aspect-ratio: 3/4;
   display: flex;
   align-items: flex-end;
   padding: 24px;
+  flex-shrink: 0;
 }
 
 .rovina-card-inner {
@@ -519,11 +519,13 @@ body {
 
 /* YouTube cards */
 .yt-card {
+  width: 280px;
   aspect-ratio: 16/9;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  flex-shrink: 0;
 }
 
 .yt-card-lower {
