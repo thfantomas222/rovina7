@@ -822,13 +822,29 @@ body {
     gap: 18px;
   }
 
-  .album-cover {
-    width: 220px;
-    height: 220px;
-  }
-
   .site-footer {
     padding: 18px;
+  }
+
+  .music-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .music-card {
+    width: 100%;
+  }
+
+  .rovina-card {
+    width: 100%;
+    aspect-ratio: 3/4;
+    flex-shrink: 1;
+  }
+
+  .yt-card {
+    width: 100%;
+    aspect-ratio: 16/9;
+    flex-shrink: 1;
   }
 }
 
