@@ -199,27 +199,37 @@ body {
   transform: scale(1.02);
 }
 
-/* Rovina 7 card — fixed width + aspect ratio */
+/* Rovina 7 card */
 .rovina-card {
   width: 280px;
   aspect-ratio: 3/4;
   display: flex;
   align-items: flex-end;
   padding: 24px;
+  flex-shrink: 0;
 }
 
-/* YouTube cards — fixed width */
+/* YouTube cards */
 .yt-card {
   width: 280px;
   aspect-ratio: 16/9;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .yt-card-lower {
   margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .rovina-card,
+  .yt-card {
+    width: 100%;
+    flex-shrink: 1;
+  }
 }
 
 
