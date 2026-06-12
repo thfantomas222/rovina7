@@ -544,6 +544,7 @@ body {
 .modal-content {
   flex: 1;
   padding: 36px 36px 36px 32px;
+  text-align: left;
 }
 
 .modal-artist {
