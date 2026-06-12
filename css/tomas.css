@@ -197,13 +197,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .music-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .music-card-eyebrow {
@@ -273,15 +272,14 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .yt-card-lower {
   width: 100%;
-  aspect-ratio: unset;
-  margin-bottom: 0;
-  /* fill remaining height after the top yt-card + 8px gap */
   flex: 1;
-  min-height: 80px;
+  min-height: 0;
+  margin-bottom: 0;
 }
 
 .yt-title {
@@ -574,15 +572,14 @@ body {
 
   .music-grid {
     grid-template-columns: 1fr;
+    align-items: start;
   }
 
   .yt-card-lower {
     flex: none;
     aspect-ratio: 16/9;
   }
-}
 
-@media (max-width: 640px) {
   .modal-inner { flex-direction: column; }
   .modal-art { flex: none; height: 220px; }
   .modal-content { padding: 24px 20px; }
