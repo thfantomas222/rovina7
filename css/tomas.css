@@ -488,9 +488,10 @@ body {
 }
 
 .music-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
-  align-items: flex-start;
+  align-items: start;
 }
 
 .music-card {
@@ -521,12 +522,11 @@ body {
 
 /* Rovina 7 card — taller */
 .rovina-card {
-  width: 280px;
+  width: 100%;
   aspect-ratio: 3/4;
   display: flex;
   align-items: flex-end;
   padding: 24px;
-  flex-shrink: 0;
 }
 
 .rovina-card-inner {
@@ -570,7 +570,7 @@ body {
 
 /* YouTube cards */
 .yt-card {
-  width: 280px;
+  width: 100%;
   aspect-ratio: 16/9;
   display: flex;
   align-items: center;
@@ -803,48 +803,27 @@ body {
 }
 
 /* --- RESPONSIVE --- */
+/* --- RESPONSIVE --- */
 @media (max-width: 640px) {
   .container {
     padding: 0 18px;
   }
-
   .about-inner {
     flex-direction: column;
     gap: 20px;
   }
-
   .about-photo {
     flex: none;
     width: 100%;
   }
-
   .main-nav ul {
     gap: 18px;
   }
-
   .site-footer {
     padding: 18px;
   }
-
   .music-grid {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .music-card {
-    width: 100%;
-  }
-
-  .rovina-card {
-    width: 100%;
-    aspect-ratio: 3/4;
-    flex-shrink: 1;
-  }
-
-  .yt-card {
-    width: 100%;
-    aspect-ratio: 16/9;
-    flex-shrink: 1;
+    grid-template-columns: 1fr;
   }
 }
 
