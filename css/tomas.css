@@ -203,6 +203,7 @@ body {
 .music-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .music-card-eyebrow {
@@ -275,10 +276,12 @@ body {
 }
 
 .yt-card-lower {
-  flex: 1;
+  width: 100%;
   aspect-ratio: unset;
   margin-bottom: 0;
-  min-height: 0;
+  /* fill remaining height after the top yt-card + 8px gap */
+  flex: 1;
+  min-height: 80px;
 }
 
 .yt-title {
