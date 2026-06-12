@@ -417,11 +417,47 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 580px) {
-  .modal-inner { flex-direction: column; }
-  .modal-art { flex: none; height: 200px; }
-  .modal-content { padding: 24px 20px; }
-  .modal { padding: 12px; }
+@media (max-width: 640px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .about-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-photo {
+    flex: none;
+    width: 100%;
+  }
+
+  .main-nav ul {
+    gap: 18px;
+  }
+
+  .album-cover {
+    width: 220px;
+    height: 220px;
+  }
+
+  .site-footer {
+    padding: 18px;
+  }
+
+  .music-grid {
+    gap: 12px;
+  }
+
+  .rovina-card,
+  .yt-card {
+    width: 100%;
+  }
+
+  .music-card {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 
