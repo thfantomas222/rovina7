@@ -100,3 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+document.querySelectorAll('[data-album]').forEach(el => {
+  el.addEventListener('click', () => {
+    const id = el.dataset.album;
+    document.getElementById('modal-' + id)?.classList.add('is-open');
+  });
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      el.click();
+    }
+  });
+});
