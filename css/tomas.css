@@ -615,24 +615,6 @@ body {
   min-height: 80px;
 }
 
-.modal-content .form-submit {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #0a0a0a;
-  background: #c8f000;
-  border: none;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  margin-top: 8px;
-}
-
-.modal-content .form-submit:hover {
-  opacity: 0.8;
-}
 
 .contact-link:hover { opacity: 0.55; }
 
