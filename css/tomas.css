@@ -1,5 +1,5 @@
 /* ===========================
-   ROVINA 7 — Main Stylesheet
+   TOMAS HUSZANIK — Main Stylesheet
    =========================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap');
@@ -27,7 +27,6 @@ body {
 }
 
 /* --- CENTERED CONTAINER --- */
-/* Every section's inner content is wrapped in this to stay centered */
 .container {
   width: 100%;
   max-width: 900px;
@@ -163,17 +162,7 @@ body {
   cursor: pointer;
 }
 
-.moreaboutme-art {
-  position: static;
-}
-
-.moreaboutme .subtitle {
-  display: inline-block;
-  padding-bottom: 2px;
-  transition: opacity 0.2s;
-}
-
-.moreaboutme:hover .subtitle {
+.moreaboutme:hover {
   opacity: 0.6;
 }
 
@@ -189,10 +178,54 @@ body {
 
 .moreaboutme .album-artist-name { color: #c8f000; }
 
+/* --- DIVIDER --- */
+.divider {
+  border: none;
+  border-top: 2px solid #c8f000;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   MUSIC SECTION
+   ══════════════════════════════════════════ */
+.music-section {
+  background: #0a0a0a;
+  padding: 56px 0 52px;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.music-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-card-eyebrow {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #c8f000;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.yt-eyebrow {
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
 .music-card-body {
+  background: #c8f000;
+  width: 100%;
   cursor: pointer;
   transition: transform 0.18s ease;
-  width: 100%; /* keep this */
 }
 
 .music-card-body:hover {
@@ -201,43 +234,66 @@ body {
 
 /* Rovina 7 card */
 .rovina-card {
-  width: 280px;
+  width: 100%;
   aspect-ratio: 3/4;
   display: flex;
   align-items: flex-end;
   padding: 24px;
-  flex-shrink: 0;
+}
+
+.rovina-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rovina-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+.rovina-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: clamp(22px, 3.5vw, 36px);
+  color: #0a0a0a;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 /* YouTube cards */
 .yt-card {
-  width: 280px;
+  width: 100%;
   aspect-ratio: 16/9;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
-  flex-shrink: 0;
 }
 
 .yt-card-lower {
+  flex: 1;
+  aspect-ratio: unset;
   margin-bottom: 0;
+  min-height: 0;
 }
 
-@media (max-width: 640px) {
-  .rovina-card,
-  .yt-card {
-    width: 100%;
-    flex-shrink: 1;
-  }
+.yt-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: clamp(20px, 3vw, 32px);
+  color: #0a0a0a;
+  text-transform: uppercase;
+  line-height: 1.1;
+  text-align: center;
 }
-
 
 /* ═══════════════════════════════════════════
    MODALS
    ═══════════════════════════════════════════ */
-
-/* Backdrop */
 .modal {
   display: none;
   position: fixed;
@@ -260,7 +316,6 @@ body {
   cursor: pointer;
 }
 
-/* Panel */
 .modal-panel {
   position: relative;
   background: #0a0a0a;
@@ -277,7 +332,6 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Close button */
 .modal-close {
   position: absolute;
   top: 16px;
@@ -296,7 +350,6 @@ body {
 
 .modal-close:hover { opacity: 1; }
 
-/* Inner layout: art left, text right */
 .modal-inner {
   display: flex;
   gap: 0;
@@ -309,9 +362,9 @@ body {
   align-items: stretch;
 }
 
-.modal-art-moreaboutme {
-  background: #0a0a0a;
-}
+.modal-art-moreaboutme { background: #0a0a0a; }
+.modal-art-rovina7     { background: #c8f000; }
+.modal-art-youtube     { background: #c8f000; }
 
 .modal-art img {
   width: 100%;
@@ -360,11 +413,10 @@ body {
   color: #ccc;
   line-height: 1.7;
   margin-bottom: 24px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #333;
   padding-top: 18px;
 }
 
-/* Tracklist */
 .modal-tracklist {
   margin-bottom: 24px;
 }
@@ -389,10 +441,9 @@ body {
   font-size: 13px;
   color: #ccc;
   padding: 4px 0;
-  border-bottom: 1px solid #e8e4dc;
+  border-bottom: 1px solid #222;
 }
 
-/* Streaming links */
 .modal-links {
   display: flex;
   gap: 12px;
@@ -414,234 +465,8 @@ body {
 }
 
 .modal-stream-link:hover {
-  background: #0d0d0d;
-  color: #f0ece3;
-}
-
-.modal-art-rovina7 {
   background: #c8f000;
-}
-
-.modal-art-youtube {
-  background: #c8f000;
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .container {
-    padding: 0 18px;
-  }
-
-  .about-inner {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .about-photo {
-    flex: none;
-    width: 100%;
-  }
-
-  .main-nav ul {
-    gap: 18px;
-  }
-
-  .album-cover {
-    width: 220px;
-    height: 220px;
-  }
-
-  .site-footer {
-    padding: 18px;
-  }
-
-  .music-grid {
-    gap: 12px;
-  }
-
-  .rovina-card,
-  .yt-card {
-    width: 100%;
-  }
-
-  .music-card {
-    flex: 1;
-    min-width: 0;
-  }
-}
-
-
-
-/* --- DIVIDER --- */
-.divider {
-  border: none;
-  border-top: 2px solid #c8f000;
-  margin: 0;
-}
-
-/* ══════════════════════════════════════════
-   MUSIC SECTION
-   ══════════════════════════════════════════ */
-.music-section {
-  background: #0a0a0a;
-  padding: 56px 0 52px;
-}
-
-.music-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
-}
-
-.music-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.music-card-eyebrow {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-  color: #c8f000;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.yt-eyebrow {
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.music-card-body {
-  background: #c8f000;
-  width: 100%;
-}
-
-/* Rovina 7 card — taller */
-.rovina-card {
-  width: 100%;
-  aspect-ratio: 3/4;
-  display: flex;
-  align-items: flex-end;
-  padding: 24px;
-}
-
-.rovina-card-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.rovina-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
   color: #0a0a0a;
-}
-
-.rovina-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: clamp(22px, 3.5vw, 36px);
-  color: #0a0a0a;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.rovina-link {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: #0a0a0a;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-bottom: 2px solid #0a0a0a;
-  display: inline-block;
-  padding-bottom: 1px;
-  transition: opacity 0.2s;
-}
-
-.rovina-link:hover { opacity: 0.6; }
-
-/* YouTube cards */
-.yt-card {
-  width: 100%;
-  aspect-ratio: 16/9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-}
-
-.yt-card-lower {
-  margin-bottom: 0;
-}
-
-.yt-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: clamp(20px, 3vw, 32px);
-  color: #0a0a0a;
-  text-transform: uppercase;
-  line-height: 1.1;
-  text-align: center;
-}
-
-/* ══════════════════════════════════════════
-   WHAT I DO
-   ══════════════════════════════════════════ */
-.whatido-section {
-  background: #0a0a0a;
-  padding: 56px 0 52px;
-}
-
-.whatido-heading {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: clamp(28px, 5vw, 52px);
-  color: #c8f000;
-  text-transform: uppercase;
-  margin-bottom: 36px;
-}
-
-.whatido-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.whatido-item {
-  border-top: 2px solid #c8f000;
-  padding-top: 18px;
-}
-
-.whatido-number {
-  display: block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #c8f000;
-  margin-bottom: 8px;
-}
-
-.whatido-item h3 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: 18px;
-  color: #c8f000;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.whatido-item p {
-  font-size: 14px;
-  color: #aaa;
-  line-height: 1.6;
 }
 
 /* --- CONTACT SECTION --- */
@@ -675,88 +500,6 @@ body {
 }
 
 .contact-link:hover { opacity: 0.55; }
-
-/* Contact form modal */
-.modal-panel-contact {
-  max-width: 520px;
-}
-
-.modal-content-contact {
-  padding: 40px 40px 36px;
-}
-
-.contact-form {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-row label {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #999;
-}
-
-.form-row input,
-.form-row select,
-.form-row textarea {
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  color: #0d0d0d;
-  background: transparent;
-  border: none;
-  border-bottom: 1.5px solid #ccc;
-  padding: 8px 0;
-  outline: none;
-  transition: border-color 0.2s;
-  width: 100%;
-}
-
-.form-row input:focus,
-.form-row select:focus,
-.form-row textarea:focus {
-  border-bottom-color: #0d0d0d;
-}
-
-.form-row textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.form-submit {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #f0ece3;
-  background: #0d0d0d;
-  border: none;
-  padding: 14px 28px;
-  cursor: pointer;
-  align-self: flex-start;
-  transition: opacity 0.2s;
-  margin-top: 6px;
-}
-
-.form-submit:hover { opacity: 0.75; }
-
-.form-success {
-  display: none;
-  font-size: 13px;
-  color: #555;
-  margin-top: 4px;
-}
 
 /* --- FOOTER --- */
 .site-footer {
@@ -803,33 +546,47 @@ body {
 }
 
 /* --- RESPONSIVE --- */
-/* --- RESPONSIVE --- */
 @media (max-width: 640px) {
   .container {
     padding: 0 18px;
   }
+
   .about-inner {
     flex-direction: column;
     gap: 20px;
   }
+
   .about-photo {
     flex: none;
     width: 100%;
   }
+
   .main-nav ul {
     gap: 18px;
   }
+
   .site-footer {
     padding: 18px;
   }
+
   .music-grid {
     grid-template-columns: 1fr;
   }
+
+  .yt-card-lower {
+    flex: none;
+    aspect-ratio: 16/9;
+  }
+}
+
+@media (max-width: 580px) {
+  .modal-inner { flex-direction: column; }
+  .modal-art { flex: none; height: 200px; }
+  .modal-content { padding: 24px 20px; }
+  .modal { padding: 12px; }
 }
 
 /* ─── SCROLL REVEAL ANIMATIONS ─────────────────────────────────────────── */
-
-/* Initial hidden state — elements start shifted down and invisible */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -838,18 +595,15 @@ body {
     transform 2.0s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Stagger child elements so they appear one after another */
 .reveal:nth-child(2) { transition-delay: 0.08s; }
 .reveal:nth-child(3) { transition-delay: 0.16s; }
 .reveal:nth-child(4) { transition-delay: 0.24s; }
 
-/* Triggered state — JS adds this class when element enters viewport */
 .reveal.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
