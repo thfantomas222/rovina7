@@ -444,7 +444,12 @@ body {
 .music-grid {
   display: flex;
   gap: 24px;
-  align-items: start;
+  align-items: flex-start;
+}
+
+.music-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .music-card-eyebrow {
@@ -524,8 +529,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  flex-shrink: 0;
+  margin-bottom: 8px;
 }
 
 .yt-card-lower {
