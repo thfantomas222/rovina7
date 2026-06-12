@@ -294,7 +294,9 @@
   </div>
 </div>
 
-  <div class="modal" id="modal-youtube2" role="dialog" aria-modal="true" aria-labelledby="youtube2-title">
+  
+<!-- Contact Form Modal -->
+<div class="modal" id="modal-youtube2" role="dialog" aria-modal="true" aria-labelledby="youtube2-title">
   <div class="modal-backdrop"></div>
   <div class="modal-panel">
     <button class="modal-close" aria-label="Close">&#x2715;</button>
@@ -302,12 +304,22 @@
       <div class="modal-art modal-art-youtube"></div>
       <div class="modal-content">
         <p class="modal-artist">Tomas Huszanik</p>
-        <h2 class="modal-title" id="youtube2-title">YOUR TITLE HERE</h2>
-        <p class="modal-description">
-          Your description here.
-        </p>
-        <div class="modal-links">
-          <a href="#" class="modal-stream-link">LINK</a>
+        <h2 class="modal-title" id="youtube2-title">GET IN TOUCH</h2>
+        <p class="modal-description">Feel free to reach out for collaborations, bookings or any inquiries.</p>
+        <div class="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your message..."></textarea>
+          </div>
+          <button class="form-submit" onclick="this.closest('.modal').classList.remove('is-open')">SEND MESSAGE</button>
         </div>
       </div>
     </div>
